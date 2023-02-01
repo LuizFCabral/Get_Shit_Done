@@ -1,0 +1,33 @@
+:root {
+	--roxo: #702e9cd2;
+	--preto-claro: #19181f;
+	--violeta: #5a5572d7;
+}
+
+.container {
+	height: 78px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 25px;
+	background-color: var(--preto-claro);
+	color: var(--roxo);
+	border-bottom: 1px solid var(--violeta);
+}
+
+.info-user {
+	width: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img-user {
+	font-size: 50px;
+	cursor: pointer;
+}
+
+.link {
+	color: var(--roxo);
+}

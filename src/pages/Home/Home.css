@@ -1,0 +1,8 @@
+:root {
+	--preto-claro: #19181f;
+}
+
+.body {
+	background-color: var(--preto-claro);
+	height: 100vh;
+}
