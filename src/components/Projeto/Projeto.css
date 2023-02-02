@@ -1,0 +1,9 @@
+.container-projeto {
+	height: 110px;
+	max-width: 30%;
+	border-radius: 10px;
+}
+
+.title-project {
+	margin: 7px 7px;
+}

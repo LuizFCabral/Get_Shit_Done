@@ -8,7 +8,7 @@ const Header = () => {
 	const handleClickUser = () => {};
 
 	return (
-		<div className="container">
+		<div className="container-header">
 			<h2 className="logo">logo</h2>
 			<div className="info-user">
 				<h2 className="nome-user">Nome</h2>

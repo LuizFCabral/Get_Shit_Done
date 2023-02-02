@@ -1,0 +1,12 @@
+.container-projetos {
+	margin: 60px auto;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container-projetos > div {
+	flex: 1 1 250px;
+	margin: 15px;
+}
