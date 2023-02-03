@@ -1,0 +1,29 @@
+:root {
+	--roxo: #67159c;
+	--verde: #07d962;
+	--preto: #19181f;
+	--preto-fosco: #1e1e26;
+	--branco: #fff;
+}
+
+.fundo {
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--preto);
+}
+
+.logotipo {
+	color: var(--branco);
+	font-size: x-large;
+}
+
+.containerForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100vh;
+	background-color: var(--preto-fosco);
+}
