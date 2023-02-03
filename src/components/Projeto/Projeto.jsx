@@ -6,7 +6,9 @@ const Projeto = ({ project }) => {
 	return (
 		<div
 			className="container-projeto"
-			style={{ background: project.aparencia }}
+			style={{
+				background: project.aparencia,
+			}}
 		>
 			<h3 className="title-project">{project.nome}</h3>
 		</div>

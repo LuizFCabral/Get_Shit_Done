@@ -1,9 +1,28 @@
+:root {
+	--shwadow: rgba(0, 0, 0, 0.4);
+}
+
 .container-projeto {
 	height: 110px;
 	max-width: 30%;
 	border-radius: 10px;
+	cursor: pointer;
 }
 
+.container-projeto::before {
+	content: '';
+	position: absolute;
+	width: 20%;
+	margin-left: 5%;
+	margin-top: 3%;
+	border-radius: 10px;
+	height: 90px;
+	transform-origin: left;
+	transform: skewX(-25deg);
+	background-color: var(--shwadow);
+	filter: blur(6px);
+	z-index: -1;
+}
 .title-project {
 	margin: 7px 7px;
 }
