@@ -1,0 +1,42 @@
+:root {
+	--roxo: #67159c;
+	--verde: #07d962;
+	--preto: #19181f;
+	--preto-fosco: #1e1e26;
+	--branco: #fff;
+	--roxo-fosco: #877593;
+}
+
+.input-box > label {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+}
+
+.input-box > label > p {
+	color: var(--roxo);
+}
+
+.input-field {
+	gap: 15px;
+	padding: 3px;
+	cursor: text;
+	display: flex;
+	align-items: center;
+}
+
+.input-field > input {
+	padding: 0 10px;
+	outline: none;
+	height: 4.625rem;
+	width: 23.3125rem;
+	font-size: 1.7rem;
+	border-radius: 6px;
+	color: var(--roxo-fosco);
+	border: 2px solid var(--roxo);
+	background-color: var(--preto-fosco);
+}
+
+.input-field input:focus {
+	outline: none;
+}
