@@ -33,27 +33,6 @@
 	margin: 38px 64px;
 }
 
-.input-box > label {
-	font-weight: 700;
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-}
-
-.input-box > label > p {
-	color: var(--roxo);
-}
-
-.input-field > input {
-	outline: none;
-	font-size: 1.7rem;
-	width: 23.3125rem;
-	height: 4.625rem;
-	color: var(--roxo-fosco);
-	background-color: var(--preto-fosco);
-	border-radius: 6px;
-	border: 2px solid var(--roxo);
-}
-
 .btn {
 	border: none;
 	cursor: pointer;

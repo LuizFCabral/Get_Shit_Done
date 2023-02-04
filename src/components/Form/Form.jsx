@@ -1,7 +1,12 @@
 import React from 'React';
 import './Form.css';
 
+import Input from '../Input/Input';
+
 const Form = () => {
+	const tipoEmail = 'email';
+	const tipoSenha = 'password';
+
 	return (
 		<form method="POST" className="form">
 			<div className="title-form">SIGN IN</div>
@@ -9,17 +14,13 @@ const Form = () => {
 				<div className="input-box">
 					<label htmlFor="name">
 						<p>NOME</p>
-						<div className="input-field">
-							<input name="nome" type="text" />
-						</div>
+						<Input tipoInput={tipoEmail} />
 					</label>
 				</div>
 				<div className="input-box">
 					<label htmlFor="password">
 						<p>SENHA</p>
-						<div className="input-field">
-							<input name="senha" type="password" />
-						</div>
+						<Input tipoInput={tipoSenha} />
 					</label>
 				</div>
 				<button type="#" className="btn">
