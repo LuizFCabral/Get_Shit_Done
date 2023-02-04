@@ -36,10 +36,26 @@ const Home = () => {
 			aparencia: '#b64cad',
 		},
 	]);
+
+	const handleAddProject = () => {
+		const newProject = [
+			...projects,
+			{
+				id: 3,
+				manager_id: 1,
+				nome: 'New Project',
+				descricao: 'New project',
+				aparencia: '#46d359d5',
+			},
+		];
+
+		setProjects(newProject);
+	};
+
 	return (
 		<div className="body">
 			<Header />
-			<Projetos projects={projects} />
+			<Projetos projects={projects} handleAddProject={handleAddProject} />
 		</div>
 	);
 };

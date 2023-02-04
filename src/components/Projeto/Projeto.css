@@ -1,5 +1,5 @@
 :root {
-	--shwadow: rgba(0, 0, 0, 0.4);
+	--shwadow: rgba(0, 0, 0, 0.5);
 }
 
 .container-projeto {
@@ -9,14 +9,19 @@
 	cursor: pointer;
 }
 
+.container-projeto:hover {
+	height: 120px;
+	max-width: 31%;
+}
+
 .container-projeto::before {
 	content: '';
 	position: absolute;
 	width: 20%;
 	margin-left: 5%;
-	margin-top: 3%;
+	margin-top: 2.35%;
 	border-radius: 10px;
-	height: 90px;
+	height: 95px;
 	transform-origin: left;
 	transform: skewX(-25deg);
 	background-color: var(--shwadow);

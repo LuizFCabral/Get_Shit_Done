@@ -1,3 +1,7 @@
+:root {
+	--cinza-roxo: #986eb4d2;
+}
+
 .container-projetos {
 	margin: 60px auto;
 	width: 80%;
@@ -10,4 +14,17 @@
 .container-projetos > div {
 	flex: 1 1 250px;
 	margin: 15px;
+}
+
+.add-projeto {
+	height: 110px;
+	max-width: 20%;
+	font-size: 40px;
+	color: var(--cinza-roxo);
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
 }
