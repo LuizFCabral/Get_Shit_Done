@@ -1,20 +1,18 @@
 import React from 'React';
 import './Input.css';
 
-const Input = ({ tipoInput }) => {
-	if (tipoInput == 'email') {
-		return (
-			<div className="input-field">
-				<input placeholder={tipoInput} name="nome" type={tipoInput} />
-			</div>
-		);
-	} else if (tipoInput == 'password') {
-		return (
-			<div className="input-field">
-				<input placeholder={tipoInput} name="nome" type={tipoInput} />
-			</div>
-		);
-	}
+const Input = ({ type, text, name, placeholder, handleOnChange, value }) => {
+	return (
+		<div className="input-field">
+			<input
+				type={type}
+				name={name}
+				placeholder={placeholder}
+				value={value}
+				onChange={handleOnChange}
+			/>
+		</div>
+	);
 };
 
 export default Input;

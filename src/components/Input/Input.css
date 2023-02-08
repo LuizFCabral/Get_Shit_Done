@@ -1,20 +1,11 @@
 :root {
 	--roxo: #67159c;
+	--roxo-escurin: #59098f;
 	--verde: #07d962;
 	--preto: #19181f;
 	--preto-fosco: #1e1e26;
 	--branco: #fff;
 	--roxo-fosco: #877593;
-}
-
-.input-box > label {
-	font-weight: 700;
-	font-size: 1.5rem;
-	line-height: 2.25rem;
-}
-
-.input-box > label > p {
-	color: var(--roxo);
 }
 
 .input-field {
@@ -26,17 +17,24 @@
 }
 
 .input-field > input {
-	padding: 0 10px;
+	width: 100%;
 	outline: none;
-	height: 4.625rem;
-	width: 23.3125rem;
+	height: 3.75rem;
+	padding: 0 15px;
 	font-size: 1.7rem;
 	border-radius: 6px;
-	color: var(--roxo-fosco);
-	border: 2px solid var(--roxo);
+	color: var(--branco);
+	border: 2px solid var(--preto-fosco);
 	background-color: var(--preto-fosco);
 }
 
-.input-field input:focus {
-	outline: none;
+.input-field > input:hover {
+	transition: 0.5s ease-in-out;
+	border: 2px solid var(--roxo);
+}
+
+.input-field input::placeholder {
+	font-weight: 500;
+	font-style: italic;
+	color: var(--roxo-fosco);
 }
