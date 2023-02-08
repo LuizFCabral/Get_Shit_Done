@@ -10,8 +10,9 @@
 .form {
 	display: flex;
 	flex-direction: column;
-	width: 31.125rem;
-	height: 35.6875rem;
+	width: 100%;
+	max-width: 480px;
+	min-height: 35.6875rem;
 	background-color: var(--preto);
 	border-radius: 6px;
 }
@@ -33,14 +34,12 @@
 	margin: 38px 64px;
 }
 
-.btn {
-	border: none;
-	cursor: pointer;
+.input-box > label {
 	font-weight: 700;
 	font-size: 1.5rem;
-	width: 23.3125rem;
-	height: 4.625rem;
-	color: var(--branco);
-	border-radius: 6px;
-	background-color: var(--roxo);
+	line-height: 2.25rem;
+}
+
+.input-box > label > p {
+	color: var(--roxo);
 }
