@@ -1,13 +1,13 @@
 import React from 'React';
 import './Login.css';
-import Form from '../../components/Form/Form';
+import Formlogin from '../../components/Form/Form-login';
 
 const Login = () => {
 	return (
 		<div className="fundo">
 			<div className="logotipo">Logo</div>
 			<div className="containerForm">
-				<Form />
+				<Formlogin titulo="sign in" />
 			</div>
 		</div>
 	);
