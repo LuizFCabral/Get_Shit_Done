@@ -1,0 +1,26 @@
+:root {
+	--roxo: #67159c;
+	--roxo-escurin: #59098f;
+	--verde: #07d962;
+	--preto: #19181f;
+	--preto-fosco: #1e1e26;
+	--branco: #fff;
+	--roxo-fosco: #877593;
+}
+
+.btn {
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 1.5rem;
+	width: 100%;
+	height: 3.75rem;
+	color: var(--branco);
+	border-radius: 6px;
+	background-color: var(--roxo);
+	transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+	background-color: var(--roxo-escurin);
+}

@@ -1,0 +1,40 @@
+:root {
+	--roxo: #67159c;
+	--roxo-escurin: #59098f;
+	--verde: #07d962;
+	--preto: #19181f;
+	--preto-fosco: #1e1e26;
+	--branco: #fff;
+	--roxo-fosco: #877593;
+}
+
+.input-field {
+	gap: 15px;
+	padding: 3px;
+	cursor: text;
+	display: flex;
+	align-items: center;
+}
+
+.input-field > input {
+	width: 100%;
+	outline: none;
+	height: 3.75rem;
+	padding: 0 15px;
+	font-size: 1.7rem;
+	border-radius: 6px;
+	color: var(--branco);
+	border: 2px solid var(--preto-fosco);
+	background-color: var(--preto-fosco);
+}
+
+.input-field > input:hover {
+	transition: 0.5s ease-in-out;
+	border: 2px solid var(--roxo);
+}
+
+.input-field input::placeholder {
+	font-weight: 500;
+	font-style: italic;
+	color: var(--roxo-fosco);
+}

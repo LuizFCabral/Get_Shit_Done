@@ -1,0 +1,45 @@
+:root {
+	--roxo: #67159c;
+	--verde: #07d962;
+	--preto: #19181f;
+	--preto-fosco: #1e1e26;
+	--branco: #fff;
+	--roxo-fosco: #877593;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 480px;
+	min-height: 35.6875rem;
+	background-color: var(--preto);
+	border-radius: 6px;
+}
+
+.title-form {
+	margin-top: 2.8125rem;
+	margin-left: 4rem;
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 4.5rem;
+	color: var(--roxo);
+}
+
+.inputContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.25rem;
+	margin: 38px 64px;
+}
+
+.input-box > label {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+}
+
+.input-box > label > p {
+	color: var(--roxo);
+}
