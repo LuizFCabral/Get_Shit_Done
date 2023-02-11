@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './Login.css';
 import Formlogin from '../../components/Form/Form-login';
 

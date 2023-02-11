@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './Input.css';
 
 const Input = ({ type, text, name, placeholder, handleOnChange, value }) => {

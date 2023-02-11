@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './Form.css';
 
 import Input from '../Input/Input';
