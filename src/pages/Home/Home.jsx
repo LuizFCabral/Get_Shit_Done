@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import Projetos from '../../components/Projeto/Projetos';
 import Header from '../../components/Header/Header';
@@ -38,6 +39,16 @@ const Home = () => {
 		},
 	]);
 	const [visibility, setVisibility] = useState('hidden');
+
+	useEffect(() => {
+		const fechtProject = async () => {
+			const { data } = await axios.get('http://localhost:3500/project');
+			console.log(data);
+			setProjects(data);
+		};
+
+		fechtProject();
+	}, []);
 
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF';
