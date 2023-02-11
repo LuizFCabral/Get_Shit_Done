@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RxPlus } from 'react-icons/rx';
 
 import Projeto from './Projeto';
 
 import './Projetos.css';
 
-const Projetos = ({ projects, handleAddProject }) => {
+const Projetos = ({ projects, handleVisibility }) => {
 	return (
 		<div className="container-projetos">
 			{projects.map((project) => (
 				<Projeto project={project} />
 			))}
-			<div className="add-projeto" onClick={() => handleAddProject()}>
+			<div className="add-projeto" onClick={() => handleVisibility('visible')}>
 				<RxPlus />
 			</div>
 		</div>
