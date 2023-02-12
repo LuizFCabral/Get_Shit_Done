@@ -18,7 +18,6 @@
 	color: var(--branco);
 	border-radius: 6px;
 	background-color: var(--roxo);
-	transition: 0.5s ease-in-out;
 }
 
 .btn:hover {

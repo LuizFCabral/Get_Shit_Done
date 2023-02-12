@@ -18,9 +18,11 @@ const FormAddProj = ({
 	};
 
 	const handleOnclick = () => {
-		handleAddProject(inputData);
-		setInputData('');
-		handleVisibility('hidden');
+		if (inputData.length != 0) {
+			handleAddProject(inputData);
+			setInputData('');
+			handleVisibility('hidden');
+		}
 	};
 
 	return (
