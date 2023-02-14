@@ -8,36 +8,7 @@ import Form from '../../components/Form/Form-AddProj';
 import './Home.css';
 
 const Home = () => {
-	const [projects, setProjects] = useState([
-		{
-			id: 0,
-			manager_id: 1,
-			nome: 'Faculdade',
-			descricao: 'Sempre estudadno',
-			aparencia: '#302472',
-		},
-		{
-			id: 1,
-			manager_id: 1,
-			nome: 'Trabalho',
-			descricao: 'Sempre trabalhando',
-			aparencia: '#1a5834',
-		},
-		{
-			id: 2,
-			manager_id: 1,
-			nome: 'Férias',
-			descricao: 'Planejando as férias',
-			aparencia: '#277e94',
-		},
-		{
-			id: 3,
-			manager_id: 1,
-			nome: 'Macarronada',
-			descricao: 'Planejando a macarronada de domingo',
-			aparencia: '#b64cad',
-		},
-	]);
+	const [projects, setProjects] = useState([]);
 	const [visibility, setVisibility] = useState('hidden');
 
 	useEffect(() => {
@@ -59,20 +30,24 @@ const Home = () => {
 		return color;
 	}
 
-	const handleAddProject = (titulo) => {
-		const newProject = [
-			...projects,
-			{
-				id: 3,
-				manager_id: 1,
-				nome: titulo,
-				descricao: 'New project',
-				aparencia: getRandomColor(),
-			},
-		];
+	const handleAddProject = async (titulo) => {
+		const newProject = {
+			manager_id: 1,
+			nome: titulo,
+			descricao: '',
+			aparencia: getRandomColor(),
+		};
 
-		setProjects(newProject);
+		await axios
+			.post('http://localhost:3500/project', newProject)
+			.then((res) => {
+				console.log(res);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
+
 	const handleVisibility = (visibility) => {
 		setVisibility(visibility);
 	};

@@ -21,12 +21,12 @@ const FormAddProj = ({
 		if (inputData.length != 0) {
 			handleAddProject(inputData);
 			setInputData('');
-			handleVisibility('hidden');
+			//handleVisibility('hidden');
 		}
 	};
 
 	return (
-		<div
+		<form
 			className="form"
 			style={{
 				position: 'absolute',
@@ -55,7 +55,7 @@ const FormAddProj = ({
 					Adicionar
 				</Button>
 			</div>
-		</div>
+		</form>
 	);
 };
 
