@@ -13,7 +13,7 @@ const Home = () => {
 
 	useEffect(() => {
 		const fechtProject = async () => {
-			const { data } = await axios.get('http://localhost:3500/project');
+			const { data } = await axios.get('http://localhost:3000/project');
 			console.log(data);
 			setProjects(data);
 		};
@@ -39,7 +39,7 @@ const Home = () => {
 		};
 
 		await axios
-			.post('http://localhost:3500/project', newProject)
+			.post('http://localhost:3000/project', newProject)
 			.then((res) => {
 				console.log(res);
 			})
@@ -55,6 +55,7 @@ const Home = () => {
 	return (
 		<div className="body">
 			<Header />
+
 			<Projetos projects={projects} handleVisibility={handleVisibility} />
 			<Form
 				titulo="add project"

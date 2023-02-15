@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RxCross2 } from 'react-icons/rx';
 
 import './Form.css';
 
@@ -32,11 +33,25 @@ const FormAddProj = ({
 				position: 'absolute',
 				justifyContent: 'center',
 				alignSelf: 'center',
+				marginTop: '5%',
 				zIndex: 4,
 				border: '4px solid #67159c',
 				visibility: visibility,
 			}}
 		>
+			<button
+				style={{
+					position: 'absolute',
+					top: '20px',
+					right: '15px',
+					backgroundColor: 'transparent',
+					color: '#67159c',
+					border: 'None',
+					fontSize: '2.5rem',
+				}}
+			>
+				<RxCross2 />
+			</button>
 			<div className="title-form">{titulo.toUpperCase()}</div>
 			<div className="inputContainer">
 				<div className="input-box">
