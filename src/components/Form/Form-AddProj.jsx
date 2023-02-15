@@ -22,7 +22,6 @@ const FormAddProj = ({
 		if (inputData.length != 0) {
 			handleAddProject(inputData);
 			setInputData('');
-			//handleVisibility('hidden');
 		}
 	};
 
@@ -36,10 +35,11 @@ const FormAddProj = ({
 				marginTop: '5%',
 				zIndex: 4,
 				border: '4px solid #67159c',
+				minHeight: '30rem',
 				visibility: visibility,
 			}}
 		>
-			<button
+			<div
 				style={{
 					position: 'absolute',
 					top: '20px',
@@ -48,10 +48,12 @@ const FormAddProj = ({
 					color: '#67159c',
 					border: 'None',
 					fontSize: '2.5rem',
+					cursor: 'pointer',
 				}}
+				onClick={() => handleVisibility('hidden')}
 			>
 				<RxCross2 />
-			</button>
+			</div>
 			<div className="title-form">{titulo.toUpperCase()}</div>
 			<div className="inputContainer">
 				<div className="input-box">
