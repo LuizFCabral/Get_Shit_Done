@@ -54,7 +54,7 @@ const Home = () => {
 
 	return (
 		<div className="body">
-			<Header />
+			<Header tipo={'home'} />
 
 			<Projetos projects={projects} handleVisibility={handleVisibility} />
 			<Form
