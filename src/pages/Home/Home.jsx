@@ -11,15 +11,19 @@ const Home = () => {
 	const [projects, setProjects] = useState([]);
 	const [visibility, setVisibility] = useState('hidden');
 
-	useEffect(() => {
-		const fechtProject = async () => {
-			const { data } = await axios.get('http://localhost:3000/project');
-			console.log(data);
-			setProjects(data);
-		};
+	const fechtProject = async (parte) => {
+		const { data } = await axios.get(`http://localhost:3000/project/${parte}`);
+		console.log(data);
+		setProjects(data);
+	};
 
-		fechtProject();
+	useEffect(() => {
+		fechtProject('');
 	}, []);
+
+	const handleSerach = async (partePesquisa) => {
+		fechtProject(partePesquisa);
+	};
 
 	function getRandomColor() {
 		var letters = '0123456789ABCDEF';
@@ -54,7 +58,7 @@ const Home = () => {
 
 	return (
 		<div className="body">
-			<Header tipo={'home'} />
+			<Header tipo={'home'} handleSerach={handleSerach} />
 
 			<Projetos projects={projects} handleVisibility={handleVisibility} />
 			<Form
