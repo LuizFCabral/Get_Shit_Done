@@ -17,17 +17,55 @@
 }
 
 .info-user {
-	width: 10%;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+}
+
+.nome-user {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 .img-user {
 	font-size: 50px;
+
 	cursor: pointer;
 }
 
-.link {
-	color: var(--roxo);
+.popupHeader {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	top: 100px;
+	right: 20px;
+	min-width: 120px;
+	min-height: 80px;
+	background-color: var(--roxo);
+	z-index: 2;
+}
+
+.popupHeader::before {
+	content: '';
+	position: absolute;
+	display: flex;
+	width: 15px;
+	height: 20px;
+	right: 25%;
+	top: -9px;
+	background: var(--roxo);
+	transform: rotate(45deg);
+}
+
+.popupHeader a {
+	text-decoration: none;
+	color: white;
+}
+
+.item-popup {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid var(--violeta);
 }

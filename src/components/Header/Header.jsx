@@ -1,11 +1,10 @@
 import React from 'react';
 import { RxAvatar } from 'react-icons/rx';
-import { Link } from 'react-router-dom';
 
 import './Header.css';
 import Input from '../Input/Input';
 
-const Header = ({ tipo, handleSerach }) => {
+const Header = ({ tipo, handleSerach, handleVisibilitypopup, visibility }) => {
 	const handleOnChange = (e) => {
 		handleSerach(e.target.value);
 	};
@@ -26,10 +25,28 @@ const Header = ({ tipo, handleSerach }) => {
 			)}
 
 			<div className="info-user">
-				<h2 className="nome-user">Nome</h2>
-				<Link to="/profile" className="link">
-					<RxAvatar className="img-user" />
-				</Link>
+				<p className="nome-user">Nome</p>
+				<RxAvatar
+					className="img-user"
+					onClick={() =>
+						handleVisibilitypopup(
+							visibility === 'visible' ? 'hidden' : 'visible'
+						)
+					}
+				/>
+				<div
+					className="popupHeader"
+					style={{
+						visibility: visibility,
+					}}
+				>
+					<div className="item-popup">
+						<a href="/profile">Perfil</a>
+					</div>
+					<div className="item-popup">
+						<a href="#">Sair</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

@@ -23,6 +23,7 @@ const Input = ({
 				onChange={handleOnChange}
 				style={{
 					maxHeight: height,
+					minWidth: width,
 					fontSize: fontSize,
 					borderRadius: border,
 				}}

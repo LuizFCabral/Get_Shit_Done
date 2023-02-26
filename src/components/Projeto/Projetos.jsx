@@ -5,13 +5,16 @@ import Projeto from './Projeto';
 
 import './Projetos.css';
 
-const Projetos = ({ projects, handleVisibility }) => {
+const Projetos = ({ projects, handleVisibilityForm }) => {
 	return (
 		<div className="container-projetos">
 			{projects.map((project) => (
 				<Projeto project={project} />
 			))}
-			<div className="add-projeto" onClick={() => handleVisibility('visible')}>
+			<div
+				className="add-projeto"
+				onClick={() => handleVisibilityForm('visible')}
+			>
 				<RxPlus />
 			</div>
 		</div>

@@ -5,6 +5,7 @@
 .body {
 	display: flex;
 	flex-flow: column;
+	min-width: 100vw;
 	min-height: 100vh;
 	background-color: var(--preto-claro);
 	z-index: -1;

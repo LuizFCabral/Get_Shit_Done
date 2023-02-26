@@ -9,7 +9,8 @@ import './Home.css';
 
 const Home = () => {
 	const [projects, setProjects] = useState([]);
-	const [visibility, setVisibility] = useState('hidden');
+	const [visibilityForm, setVisibilityForm] = useState('hidden');
+	const [visibilitypopup, setVisibilitypopup] = useState('hidden');
 
 	const fechtProject = async (parte) => {
 		const { data } = await axios.get(`http://localhost:3000/project/${parte}`);
@@ -21,7 +22,7 @@ const Home = () => {
 		fechtProject('');
 	}, []);
 
-	const handleSerach = async (partePesquisa) => {
+	const handleSearch = async (partePesquisa) => {
 		fechtProject(partePesquisa);
 	};
 
@@ -52,20 +53,32 @@ const Home = () => {
 			});
 	};
 
-	const handleVisibility = (visibility) => {
-		setVisibility(visibility);
+	//visibilidade dos elementos
+	const handleVisibilityForm = (visibility) => {
+		setVisibilityForm(visibility);
+	};
+	const handleVisibilitypopup = (visibility) => {
+		setVisibilitypopup(visibility);
 	};
 
 	return (
 		<div className="body">
-			<Header tipo={'home'} handleSerach={handleSerach} />
+			<Header
+				tipo={'home'}
+				handleSearch={handleSearch}
+				handleVisibilitypopup={handleVisibilitypopup}
+				visibility={visibilitypopup}
+			/>
 
-			<Projetos projects={projects} handleVisibility={handleVisibility} />
+			<Projetos
+				projects={projects}
+				handleVisibilityForm={handleVisibilityForm}
+			/>
 			<Form
 				titulo="add project"
 				handleAddProject={handleAddProject}
-				handleVisibility={handleVisibility}
-				visibility={visibility}
+				handleVisibilityForm={handleVisibilityForm}
+				visibility={visibilityForm}
 			/>
 		</div>
 	);

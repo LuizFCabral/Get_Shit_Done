@@ -10,7 +10,7 @@ const FormAddProj = ({
 	titulo,
 	handleAddProject,
 	visibility,
-	handleVisibility,
+	handleVisibilityForm,
 }) => {
 	const [inputData, setInputData] = useState('');
 
@@ -50,7 +50,7 @@ const FormAddProj = ({
 					fontSize: '2.5rem',
 					cursor: 'pointer',
 				}}
-				onClick={() => handleVisibility('hidden')}
+				onClick={() => handleVisibilityForm('hidden')}
 			>
 				<RxCross2 />
 			</div>
